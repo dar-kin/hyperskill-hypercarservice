@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from django.shortcuts import render
+    from django.views import View
+
+
+    class ReviewView(View):
+        reviews = []  # List of reviews as plain strings
+
+        def get(self, request, *args, **kwargs):
+            ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8759
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8759">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 10:44:05 UTC
+record: -1

@@ -1,0 +1,26 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Triangle:
+        def __init__(self, side1, side2, side3):
+            self.side1 = side1
+            self.side2 = side2
+            self.side3 = side3
+
+        def get_perimeter(self):
+            return self.side1 + self.side2 + self.side3
+
+
+    class EquilateralTriangle(Triangle):
+        def __init__(self, side):
+            # finish the method
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7634
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7634">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 08:56:48 UTC
+record: -1

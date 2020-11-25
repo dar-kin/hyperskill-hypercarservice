@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Mammal:
+        def __init__(self):
+            self.bio_class = "mammal"
+
+        def greet(self):
+            print("I am a {}!".format(self.bio_class))
+
+
+    # create class Dolphin here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7636
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7636">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 09:00:52 UTC
+record: -1

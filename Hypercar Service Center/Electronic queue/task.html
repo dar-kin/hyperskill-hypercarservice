@@ -1,0 +1,40 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>Every day at the center there are two or three hard-working mechanics and they take clients in the order they are coming. Sometimes the line becomes really long when customers drive in at the same time. Usually, the diagnostic test takes <strong>30 minutes</strong>, inflating the tires <strong>5 minutes</strong> and changing the oil about <strong>2 minutes</strong>.</p>
+
+<p>The company conducts a survey and come to the conclusion: the longer the service takes, the longer the client agrees to wait. That's why a new algorithm of processing should be implemented:</p>
+
+<ol>
+	<li>As long as there are clients in the line waiting to change oil, they are served first;</li>
+	<li>The ones who want to inflate tires are served next</li>
+	<li>The clients who come to get diagnostics go last</li>
+</ol>
+
+<p>To distinguish one ticket from another we should choose a number for it. Starting from 1 and getting next in increasing order is the expected solution from you. Not all the clients agree to wait long, so give them the estimated time before their turn. Do not forget that you have a particular order of processing the line.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to create a handler that gives tickets to the clients. The handler should serve <em>GET</em> requests on URLs:</p>
+
+<ul>
+	<li><em>&lt;base_url&gt;/get_ticket/change_oil</em></li>
+	<li><em>&lt;base_url&gt;/get_ticket/inflate_tires</em></li>
+	<li><em>&lt;base_url&gt;/get_ticket/diagnostic</em></li>
+</ul>
+
+<p>On a page there should be a <code class="language-html">&lt;div&gt;</code> element with the content "<em>Your number is &lt;ticket_number&gt;</em>", where the <em>&lt;ticket_number&gt;</em> is an id of a ticket. To calculate estimated time, sum up the time of processing all the tickets before the given one according to the algorithm above. The estimated time should be in a <code class="language-html">&lt;div&gt;</code> element with content "<em>Please wait around &lt;minutes_to_wait&gt; minutes</em>" where <em>&lt;minutes_to_wait&gt;</em> is the number of estimated minutes:</p>
+
+<pre><code class="language-html">&lt;div&gt;Your number is 7&lt;/div&gt;
+&lt;div&gt;Please wait around 49 minutes&lt;/div&gt;</code></pre>
+
+<p><div class="alert alert-primary"> To store the data, you may use Python dictionaries and lists. For example, you can create a dictionary <code class="language-html">line_of_cars</code> with the keys matching service names and values having a list of customers' tickets. </div></p>
+
+<h2 style="text-align: center;">Examples</h2>
+
+<p>If you have 2 clients coming to change oil, 3 clients waiting to inflate tires and one to get diagnostics, the estimated time for the next customer would be:</p>
+
+<ul>
+	<li>to change oil is 2 * <strong>2 minutes</strong> = 4 minutes</li>
+	<li>to inflate tires is 2 * <strong>2 minutes</strong> + 3 * <strong>5 minutes</strong> = 19 minutes</li>
+	<li>to get diagnostics 2 * <strong>2 minutes</strong> + 3 * <strong>5 minutes</strong> + 1 * <strong>30 minutes</strong> = 49 minutes</li>
+</ul>

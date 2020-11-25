@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from django.shortcuts import redirect
+    from django.views import View
+
+
+    class TodoView(View):
+        all_todos = []
+
+        def delete(self, request, todo, *args, **kwargs):
+            ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7340
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7340">JetBrains
+    Academy</a></html>
+  time: Mon, 12 Oct 2020 06:10:01 UTC
+record: -1

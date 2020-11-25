@@ -1,0 +1,25 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>In the Hypercar service center customers can always find help with three problems:</p>
+
+<ul>
+	<li>Change oil</li>
+	<li>Inflate tires</li>
+	<li>Get diagnostic test</li>
+</ul>
+
+<p>To be able to make a choice, a customer should have a menu. Each paragraph in the menu is the descriptions of the service. After clicking on an item the client is redirected to the proper page for getting a ticket, so use special HTML elements to prepare these links.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Now your task is to make a menu page with three <code class="language-html">&lt;a&gt;</code> elements with the <code class="language-html">href</code> attribute equal to <em>"/get_ticket/change_oil", "/get_ticket/inflate_tires", "/get_ticket/diagnostic</em>" accordingly:</p>
+
+<pre><code class="language-html">&lt;a target="_blank" href="/get_ticket/inflate_tires"&gt;Inflate tires&lt;/a&gt;</code></pre>
+
+<p>Take the description for each link from the list above.</p>
+
+<p>The menu page should be available on "<em>&lt;base_url&gt;/menu</em>", where <em>&lt;base_url&gt;</em> is the host. To combine a <a target="_blank" href="https://docs.djangoproject.com/en/2.2/topics/class-based-views/intro/#handling-forms-with-class-based-views" rel="noopener noreferrer nofollow">template with the HTTP handler</a> you can use <code class="language-html">django.shortcuts.render</code> function. To pass any arguments to template add the dictionary to the <code class="language-html">render</code>:</p>
+
+<pre><code class="language-python">render(request, template_name, {'name_you_use_in_template': your_variable})</code></pre>
+
+<p>You should not implement handlers for these pages: you'll do it at the next step.</p>

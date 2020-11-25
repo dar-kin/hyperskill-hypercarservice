@@ -1,0 +1,38 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>The service you're making is almost ready for customers, but you should also make it handy for operators who process the orders. They want to see the current length of each queue. If lengths are 3, 4 and 1, the content of each paragraph will be:</p>
+
+<ul>
+	<li>Change oil queue: 3</li>
+	<li>Inflate tires queue: 4</li>
+	<li>Get diagnostic queue: 1</li>
+</ul>
+
+<p>Another action they want to make is to choose when to process the next client. The simple button for this operation will serve great.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Please add three <code class="language-html">&lt;div&gt;</code> elements with content from the list above. The last element on a page should be a <code class="language-html">&lt;form&gt;</code> with the <code class="language-html">method</code> attribute equal to "<em>post</em>".</p>
+
+<p>The form should contain a <code class="language-html">&lt;button&gt;</code> element with the <code class="language-html">type</code> attribute equal to "<em>submit</em>". The label of the button is "<em>Process next</em>":</p>
+
+<pre><code class="language-html">&lt;div&gt;Change oil queue: 3&lt;/div&gt;
+&lt;div&gt;Inflate tires queue: 4&lt;/div&gt;
+&lt;div&gt;Get diagnostic queue: 1&lt;/div&gt;
+
+&lt;form method="post"&gt;{% csrf_token %}
+  &lt;button type="submit"&gt;Process next&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<p>Do not implement the handler for the form action: you'll do it at the next step.</p>
+
+<p>The page with the operator menu should be available at "<em>&lt;base_url&gt;/processing</em>", where <em>&lt;base_url&gt;</em> is the host.</p>
+
+<p>Pay attention, that the processing URL does not contain a slash at the end, so your URL pattern should not too. You can redirect GET requests to the right page with help or <code class="language-html">RedirectView</code> if you need to:</p>
+
+<pre><code class="language-python">from django.views.generic import RedirectView
+
+urlpatterns = [
+   # some other patterns
+   path('processing/', RedirectView.as_view(url='/processing'))
+]</code></pre>

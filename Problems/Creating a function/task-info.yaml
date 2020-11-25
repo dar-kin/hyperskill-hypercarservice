@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    import math
+
+
+    # Modify this function in the shell and copy the new version here
+    def my_sqrt(value):
+        if type(value) is not int and type(value) is not float:
+            return None
+        else:
+            return(math.sqrt(value))
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8242
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8242">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 08:42:32 UTC
+record: -1

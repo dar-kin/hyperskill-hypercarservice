@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from django.http import HttpResponse
+    from django.views import View
+
+
+    class HelloWorldView(View):
+        def get(self, request, *args, **kwargs):
+            ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6478
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6478">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 07:30:50 UTC
+record: -1

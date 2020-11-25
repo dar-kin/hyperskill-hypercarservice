@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper car</title>
+</head>
+<body>
+<Ul>
+    {% for service in services %}
+    <li><a target="_blank" href="/get_ticket/{{service.type}}">{{service.name}}</a></li>
+    {% endfor %}
+</Ul>
+</body>
+</html>

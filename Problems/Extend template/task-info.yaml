@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    template = """
+      {% extends "" %}
+      {%  %} {{  }} {% include "" %} {%  %}
+    """
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10004
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/10004">JetBrains
+    Academy</a></html>
+  time: Sat, 10 Oct 2020 12:49:04 UTC
+record: -1

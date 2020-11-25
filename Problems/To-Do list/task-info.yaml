@@ -1,0 +1,19 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    template = """
+    <html>
+      <div> You have {{ ... }} tasks to do: </div>
+      <div> {{ ... }} </div>
+    </html>
+    """
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10013
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/10013">JetBrains
+    Academy</a></html>
+  time: Mon, 12 Oct 2020 06:58:24 UTC
+record: -1

@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def check_word(word):
+        ...
+
+    def error_handling(word):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10225
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/10225">JetBrains
+    Academy</a></html>
+  time: Mon, 12 Oct 2020 09:47:41 UTC
+record: -1

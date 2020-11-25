@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from django.views.generic.base import TemplateView
+
+
+    class ContactsView(TemplateView):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8758
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8758">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 10:39:21 UTC
+record: -1

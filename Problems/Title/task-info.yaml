@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    template = """
+    <html>
+      <h2> </h2>
+    </html>
+    """
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6400
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6400">JetBrains
+    Academy</a></html>
+  time: Mon, 12 Oct 2020 06:53:40 UTC
+record: -1

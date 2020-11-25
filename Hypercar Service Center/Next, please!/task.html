@@ -1,0 +1,47 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>When the next client's turn is coming up, the operator should process it pushing the button. It happens when one of the mechanics has finished the work and able to serve the next client. You cannot define in the application the exact time, so leave the task to the operator.</p>
+
+<p>When the "<em>Process next</em>" button is pushed the application chooses the next client according to the algorithm's priority:</p>
+
+<ol>
+	<li>Until the line of customers to change the oil is not empty, they served first</li>
+	<li>If "<em>Change oil</em>" queue is empty the line of customers to inflate tires served next</li>
+	<li>Clients who want to get diagnostics served last.</li>
+</ol>
+
+<p>Immediately the number of chosen ticket appears on the screen for all the customers and the length of the appropriate queue become one client less. You need not save the ticket further, the only purpose of it now is to show the number on the screen.</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to make a <em>POST</em> handler for processing the next ticket. After the request is received, remove the appropriate ticket from the queue. The handler should process <em>POST</em> requests at "<em>&lt;base_url&gt;/processing</em>", where <em>&lt;base_url&gt;</em> is the host.</p>
+
+<p>Remember that you should have another handler to show information about the next ticket.</p>
+
+<p>Add "<em>Next ticket #&lt;number_of_ticket&gt;</em>" to the <code class="language-html">&lt;div&gt;</code> element to the page that will be displayed on the screen for all the clients:</p>
+
+<pre><code class="language-html">&lt;div&gt;Next ticket #7&lt;/div&gt;</code></pre>
+
+<p>If there are no tickets to process, the content of the element should be "<em>Waiting for the next client</em>":</p>
+
+<pre><code class="language-html">&lt;div&gt;Waiting for the next client&lt;/div&gt;</code></pre>
+
+<p>The page with the next ticket should be available at "<em>&lt;base_url&gt;/next</em>", where <em>&lt;base_url&gt;</em> is the host.</p>
+
+<p><div class="alert alert-warning"> Be cautious, URLs in the <em>urls.py</em> module should not contain slash in the end. </div></p>
+
+<h2 style="text-align: center;">Example</h2>
+
+<p>Assume that in some moment all the mechanics are busy and </p>
+
+<ul>
+	<li>the clients with tickets <strong>5</strong> and <strong>8</strong> are still waiting in the queue to change the oil,</li>
+	<li>the client with ticket <strong>4</strong> wants to inflate tires,</li>
+	<li>the client with ticket <strong>3</strong> is waiting to get diagnostics.</li>
+</ul>
+
+<p>When mechanics would finish their job, the operator pushes the button and on the screen for all customers shows information:</p>
+
+<pre><code class="language-html">Next ticket #5</code></pre>
+
+<p>The next ticket is <strong>5</strong> because customers changing the oil go first. So why, after <strong>5</strong> comes <strong>8</strong>, then <strong>4</strong>, and the last is <strong>3</strong>.</p>

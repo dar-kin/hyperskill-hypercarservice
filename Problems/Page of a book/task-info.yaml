@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: "from django.views.generic.base import TemplateView\n\nbook = {\n    'Page\
+    \ 1': 'This is the cat',\n    'Page 2': 'That killed the rat',\n    'Page 3':\
+    \ 'That ate the malt',\n    'Page 4': 'That lay in the house that Jack built.',\n\
+    }\n\n\nclass PageView(TemplateView):    \n    def get_context_data(self, **kwargs):\n\
+    \        ..."
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8760
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8760">JetBrains
+    Academy</a></html>
+  time: Thu, 08 Oct 2020 10:48:39 UTC
+record: -1
